@@ -8,6 +8,7 @@ class RotatingCircleEffect extends StatefulWidget {
   final double strokeWidth;
   final int duration;
   final int color;
+
   const RotatingCircleEffect(
       {super.key, required this.radius, required this.duration, required this.strokeWidth, required this.color});
 
@@ -52,8 +53,8 @@ class _RotatingCircleEffectState extends State<RotatingCircleEffect> with Single
       painter: _CirclePainter(_controller, widget.radius, widget.strokeWidth, widget.color),
       child: SizedBox(
         // decoration: BoxDecoration(color: Palette.colorC),
-        width: widget.radius,
-        height: widget.radius,
+        width: widget.radius * 2,
+        height: widget.radius * 2,
       ),
     );
   }
