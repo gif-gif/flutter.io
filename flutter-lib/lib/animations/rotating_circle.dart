@@ -10,6 +10,7 @@ class RotatingCircleEffect extends StatefulWidget {
   final int color;
 
   final double size;
+  final Widget? child;
 
   const RotatingCircleEffect(
       {super.key,
@@ -17,7 +18,8 @@ class RotatingCircleEffect extends StatefulWidget {
       required this.duration,
       required this.strokeWidth,
       required this.color,
-      required this.size});
+      required this.size,
+      this.child});
 
   static Route route() {
     //for test
@@ -63,6 +65,9 @@ class _RotatingCircleEffectState extends State<RotatingCircleEffect> with Single
         // decoration: BoxDecoration(color: Palette.colorC),
         width: widget.size,
         height: widget.size,
+        child: Center(
+          child: widget.child,
+        ),
       ),
     );
   }

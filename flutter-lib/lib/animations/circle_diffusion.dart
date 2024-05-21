@@ -11,6 +11,8 @@ class CircleDiffusionEffect extends StatefulWidget {
 
   final double size; // 主要定位用：控制整个画布大小。动画以中心点开始扩散
 
+  final Widget? child;
+
   const CircleDiffusionEffect({
     super.key,
     required this.startRadius,
@@ -20,6 +22,7 @@ class CircleDiffusionEffect extends StatefulWidget {
     required this.duration,
     required this.interval,
     required this.size,
+    this.child,
   });
   static Route route() {
     return MaterialPageRoute(
@@ -75,8 +78,12 @@ class _CircleDiffusionEffectState extends State<CircleDiffusionEffect> with Sing
           painter:
               _MyPainter(_controller.value * widget.endRadius, widget.color, widget.strokeWidth, _controller.value),
           child: SizedBox(
+            // decoration: BoxDecoration(color: Palette.colorC),
             width: widget.size,
             height: widget.size,
+            child: Center(
+              child: widget.child,
+            ),
           ),
         );
       },
