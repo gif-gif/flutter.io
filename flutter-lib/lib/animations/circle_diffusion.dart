@@ -57,7 +57,7 @@ class _CircleDiffusionEffectState extends State<CircleDiffusionEffect> with Sing
     _controller.addListener(() async {
       // print(_controller.status);
       if (_controller.isCompleted) {
-        await Future.delayed(Duration(milliseconds: widget.duration));
+        await Future.delayed(Duration(milliseconds: widget.interval));
         _controller.forward(from: lowerBound);
       } else if (_controller.isDismissed) {
         // await Future.delayed(Duration(seconds: 3));
