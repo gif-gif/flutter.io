@@ -9,8 +9,15 @@ class RotatingCircleEffect extends StatefulWidget {
   final int duration;
   final int color;
 
+  final double size;
+
   const RotatingCircleEffect(
-      {super.key, required this.radius, required this.duration, required this.strokeWidth, required this.color});
+      {super.key,
+      required this.radius,
+      required this.duration,
+      required this.strokeWidth,
+      required this.color,
+      required this.size});
 
   static Route route() {
     //for test
@@ -21,6 +28,7 @@ class RotatingCircleEffect extends StatefulWidget {
         duration: 700,
         strokeWidth: 3,
         color: 0xFF0000FF,
+        size: 100,
       ),
     );
   }
@@ -53,8 +61,8 @@ class _RotatingCircleEffectState extends State<RotatingCircleEffect> with Single
       painter: _CirclePainter(_controller, widget.radius, widget.strokeWidth, widget.color),
       child: SizedBox(
         // decoration: BoxDecoration(color: Palette.colorC),
-        width: widget.radius * 2,
-        height: widget.radius * 2,
+        width: widget.size,
+        height: widget.size,
       ),
     );
   }
