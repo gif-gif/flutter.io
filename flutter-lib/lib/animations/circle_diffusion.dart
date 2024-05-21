@@ -77,7 +77,8 @@ class _CircleDiffusionEffectState extends State<CircleDiffusionEffect> with Sing
         return CustomPaint(
           painter:
               _MyPainter(_controller.value * widget.endRadius, widget.color, widget.strokeWidth, _controller.value),
-          child: SizedBox(
+          child: Container(
+            decoration: BoxDecoration(shape: BoxShape.circle, border: Border.all(color: Color(widget.color))),
             // decoration: BoxDecoration(color: Palette.colorC),
             width: widget.size,
             height: widget.size,
