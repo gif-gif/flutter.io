@@ -1,8 +1,18 @@
 name: gif_flutter_libs
 description: A package to flutter libs
 #publish_to: https://pub.dartlang.org
-version: 0.0.2
-homepage: https://github.com/gif-gif/flutter.io
+version: 0.0.4
+issue_tracker: https://github.com/gif-gif/flutter.io/issues
+homepage: https://github.com/gif-gif/flutter.io/flutter_libs
+
+# This package supports all platforms listed below.
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  web:
+  windows:
 
 environment:
   sdk: '>=3.0.3 <4.0.0'
