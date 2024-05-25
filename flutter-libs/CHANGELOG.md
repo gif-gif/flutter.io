@@ -7,3 +7,6 @@ add platforms
 
 ## 0.0.4
 add issue_tracker url
+
+## 0.0.5
+bugfix

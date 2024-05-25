@@ -1,7 +1,7 @@
 name: gif_flutter_libs
 description: A package to flutter libs
 #publish_to: https://pub.dartlang.org
-version: 0.0.4
+version: 0.0.5
 issue_tracker: https://github.com/gif-gif/flutter.io/issues
 homepage: https://github.com/gif-gif/flutter.io/flutter_libs
 
